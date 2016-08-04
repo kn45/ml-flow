@@ -7,7 +7,7 @@ try:
 except:
     raise
 
-data_in = '../DATA_TITANIC/train.csv'
+data_in = RAW_DIR + '/train.csv'
 data_out = 'data_all'
 
 
