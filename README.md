@@ -1,10 +1,17 @@
 
-- RAW2TBL_SP: 
+- Raw2Tsv: 
 
-  Transfer label to structured form, while features remain original style.
+  Transform label to structured form, while features remain original style.
 
-  Split data to training and validation set using stratified sampling.
+  Provide 2 modules, one for transforming training data to <lable, feautures>, the other for predicting data to <features>.
 
-- FEAT_PREPROC:
+  Split training data to training and validation set using stratified sampling.
+
+- PreProc:
 
   Proc categorical and text features to strutured form.
+
+- Test:
+
+  Repeat all the procedure done to the traning set (using pickled modules) and apply model to generate submission file (predicting).
+
