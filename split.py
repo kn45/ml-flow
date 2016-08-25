@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
 import sys
+from sklearn.cross_validation import StratifiedKFold
 sys.path.append('../')
 try:
     from titanic import *
 except:
     raise
-from sklearn.cross_validation import StratifiedKFold
+
 
 # data_file = 'data_all'
 # train_file = 'data_train'
@@ -24,10 +25,6 @@ y = data[:, 0]
 valid_ratio = 0.15
 skf = StratifiedKFold(y, round(1./valid_ratio))
 train_idx, valid_idx = next(iter(skf))
-"""
-X_train, y_train = X[train_idx], y[train_idx]
-X_valid, y_valid = X[valid_idx], y[valid_idx]
-"""
 data_train = data[train_idx]
 data_valid = data[valid_idx]
 

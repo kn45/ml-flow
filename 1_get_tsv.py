@@ -7,8 +7,8 @@ try:
 except:
     raise
 
-data_in = RAW_DIR + '/train.csv'
-data_out = 'data_all'
+data_in = sys.argv[1]
+data_out = sys.argv[2]
 
 
 def raw2tsv(line):
@@ -16,14 +16,6 @@ def raw2tsv(line):
     label = fields[1:2]
     features = fields[0:1] + fields[2:]
     return '\t'.join(label + features)
-
-
-"""
-def raw2tsv_test(line):
-    fields = line.rstrip('\r\n').split(',')
-    features = fields[:]
-    yield '\t'.join(features)
-"""
 
 
 with open(data_in) as fi, open(data_out, 'w') as fo:
@@ -34,6 +26,12 @@ with open(data_in) as fi, open(data_out, 'w') as fo:
 # ====================================================
 # Picle functions for re-use
 # Pickle this function for testing module use
+
+# def raw2tsv_test(line):
+#     fields = line.rstrip('\r\n').split(',')
+#     features = fields[:]
+#     yield '\t'.join(features)
+
 
 # with open('m_raw2tsv_test', 'wb') as f:
 #     cPickle.dump(raw2tsv_test, f, -1)

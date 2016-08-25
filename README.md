@@ -1,21 +1,24 @@
 
-- Raw2Tsv: 
+- GetTsv: 
 
-  - Transform label to structured form, while features remain original style.
+  Transform label to structured form, while features remain original style.
 
-    Handle missing value.
+  - Global pre-processing:
 
-    Abnormal detection.
+    handle missing value
 
-  - Dump transformation:
+    abnormal detection
 
-    From training data to <lable, feautures>.
+  - Dump data to tab separated <lable, feautures>.
 
-    From predicting data to <features>.
+- FilSplit
 
-- Split
+  Split data to training & validation set
 
-  Split training data to training and validation set using stratified sampling.
+  - Filter data by certain rules.
+
+
+  - Split data to training & validation set using stratified sampling.
 
 - PreProc:
 
