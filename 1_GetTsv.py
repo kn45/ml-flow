@@ -1,11 +1,7 @@
 #!/usr/bin/env python
 
 import sys
-sys.path.append('../')
-try:
-    from titanic import *
-except:
-    raise
+from titanic import *
 
 data_in = sys.argv[1]
 data_out = sys.argv[2]

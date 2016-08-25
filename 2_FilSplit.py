@@ -2,19 +2,15 @@
 
 import sys
 from sklearn.cross_validation import StratifiedKFold
-sys.path.append('../')
-try:
-    from titanic import *
-except:
-    raise
+from titanic import *
 
 
 # data_file = 'data_all'
 # train_file = 'data_train'
 # valid_file = 'data_valid'
-data_file = sys.argv[0]
-train_file = sys.argv[1]
-valid_file = sys.argv[2]
+data_file = sys.argv[1]
+train_file = sys.argv[2]
+valid_file = sys.argv[3]
 
 data = None
 with open(data_file) as f:

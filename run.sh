@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PROJ_DIR=`pwd -P`
-cd $PROJ_DIR/Raw2Tsv
-python raw2tsv.py
-python split.py
+H_DIR=`pwd -P`
+
+bash 1_GetTsv.sh
+bash 2_FilSplit.sh
 
