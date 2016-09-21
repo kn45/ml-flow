@@ -2,6 +2,9 @@ import cPickle
 import numpy as np
 import os
 
+"""Common tools for this project.
+Utils are defined in this module for sharing.
+"""
 
 PROJ_DIR = os.path.split(os.path.realpath(__file__))[0]
 RAW_DIR = PROJ_DIR + '/DataTitanic'

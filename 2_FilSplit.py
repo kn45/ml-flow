@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
+import logging
 import sys
 from sklearn.cross_validation import StratifiedKFold
 from titanic import *
 
+logging.basicConfig(level=logging.INFO, format='[%(levelname)s]: %(message)s')
 
 # data_file = 'data_all'
 # train_file = 'data_train'
@@ -21,8 +23,14 @@ y = data[:, 0]
 valid_ratio = 0.15
 skf = StratifiedKFold(y, round(1./valid_ratio))
 train_idx, valid_idx = next(iter(skf))
+
 data_train = data[train_idx]
 data_valid = data[valid_idx]
+
+logging.info('data_split ratio:\t' + str(valid_ratio))
+logging.info('data_input count:\t' + str(len(data)))
+logging.info('data_train count:\t' + str(len(data_train)))
+logging.info('data_valid count:\t' + str(len(data_valid)))
 
 with open(train_file, 'w') as fo_train:
     for line in data_train:
