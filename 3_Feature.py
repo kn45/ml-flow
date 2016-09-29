@@ -4,6 +4,7 @@ import sys
 import numpy as np
 from titanic import *
 
+
 def gender_encoding(gender):
     gender = str(gender)
     res = ''

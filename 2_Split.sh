@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Split data, make data set:
-# Train+Valid
-# Train
-# Valid
-# Test
+# @Train+Valid
+# @Train
+# @Valid
+# @Test
 
 data_src=data_all/data_all.tsv
 data_trnvld=data_train/data_trnvld.tsv
@@ -14,6 +14,7 @@ data_test=data_test/data_test.tsv
 
 test_ratio=0.1
 valid_ratio=0.15
+
 
 # For regression task, random sampling
 rand_samp()
@@ -31,7 +32,7 @@ rand_samp()
   rm -f $data_src_shuf
 
   # split train_valid to train + valid
-  # for the training without cross validation
+  # for the training without cross-validation
   valid_cnt=`echo | awk -v all=$trnvld_cnt -v rate=$valid_ratio 'BEGIN{print int(all*rate)}'`
   train_cnt=`echo | awk -v valid=$valid_cnt -v all=$all_cnt 'BEGIN{print all-valid}'`
   head -n $train_cnt $data_trnvld > $data_train

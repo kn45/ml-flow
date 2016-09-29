@@ -15,14 +15,16 @@
 
 - Split
 
-  Split data to training, validation and testing set
+  Split data to training, validation and testing set.
 
   - Random sampling for regression task.
   - Stratified sampling for classification task.
-  - For cross validation, use the combination of training and validation set.
+  - For cross-validation, use the combination of training and validation set.
 
 
--   PreProc:
+-   Feature:
+
+    Prepare feature of each data instance.
 
     - Encode categorical feature.
     - Proc text features to strutured form.
@@ -30,9 +32,10 @@
 -   Training:
 
     - Resampling for unbanlanced data.
-    - Split data into real-training set & validation set.
+    - Use validation set or cross-validation to tuning model parameters.
+    - Evaluating metrics on testing set is the benchmark to compare models.
 
--   Test:
+-   Predicting:
 
-    Repeat all the procedure done to the traning set (using pickled modules) and apply model to generate submission file (predicting).
+    Repeat all the procedure done to the traning set (using possible pickled modules) and apply model to generate submission file (predicting).
 

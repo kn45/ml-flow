@@ -3,5 +3,6 @@
 H_DIR=`pwd -P`
 
 bash 1_GetTsv.sh
-bash 2_FilSplit.sh
+bash 2_Split.sh
+bash 3_Feature.sh
 
