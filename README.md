@@ -9,27 +9,30 @@
 
     abnormal detection
 
+    drop bad data by certain filter
+
   - Dump data to tab separated <lable, feautures>.
 
-- FilSplit
+- Split
 
-  Split data to training & validation set
+  Split data to training, validation and testing set
 
-  - Filter data by certain rules.
+  - Random sampling for regression task.
+  - Stratified sampling for classification task.
+  - For cross validation, use the combination of training and validation set.
 
 
-  - Split data to training & validation set using stratified sampling.
+-   PreProc:
 
-- PreProc:
+    - Encode categorical feature.
+    - Proc text features to strutured form.
 
-  - Encode categorical feature.
-  - Proc text features to strutured form.
+-   Training:
 
-- Training:
+    - Resampling for unbanlanced data.
+    - Split data into real-training set & validation set.
 
-  Resampling for unbanlanced data.?
+-   Test:
 
-- Test:
-
-  Repeat all the procedure done to the traning set (using pickled modules) and apply model to generate submission file (predicting).
+    Repeat all the procedure done to the traning set (using pickled modules) and apply model to generate submission file (predicting).
 
