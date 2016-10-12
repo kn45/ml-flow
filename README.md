@@ -22,20 +22,20 @@
   - For cross-validation, use the combination of training and validation set.
 
 
--   Feature:
+- Feature:
 
-    Prepare feature of each data instance.
+  Prepare feature of each data instance.
 
-    - Encode categorical feature.
-    - Proc text features to strutured form.
+  - Encode categorical feature.
+  - Proc text features to strutured form.
 
--   Training&Testing:
+- Training & Testing:
 
-    - Resampling for unbanlanced data.
-    - Use validation set or cross-validation to tuning model parameters.
-    - Evaluating metrics on testing set is the benchmark to compare models.
+  - Resampling for unbanlanced data.
+  - Use validation set or cross-validation to tuning model parameters.
+  - Evaluating metrics on testing set is the benchmark to compare models.
 
--   Predicting:
+- Predicting:
 
-      Repeat all the procedure done to the traning set (using possible pickled modules) and apply model to generate submission file (predicting).
+  Repeat all the procedure done to the traning set (using possible pickled modules) and apply model to generate submission file (predicting).
 
