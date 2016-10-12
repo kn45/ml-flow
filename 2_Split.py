@@ -3,13 +3,10 @@
 import logging
 import sys
 from sklearn.cross_validation import StratifiedKFold
-from titanic import *
+from mlfutil import *
 
 logging.basicConfig(level=logging.INFO, format='[%(levelname)s]: %(message)s')
 
-# data_file = 'data_all'
-# train_file = 'data_train'
-# valid_file = 'data_valid'
 data_file = sys.argv[1]
 train_file = sys.argv[2]
 valid_file = sys.argv[3]

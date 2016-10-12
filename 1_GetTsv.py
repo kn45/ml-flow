@@ -2,7 +2,7 @@
 
 import csv
 import sys
-from titanic import *
+from mlfutil import *
 
 data_in = sys.argv[1]
 data_out = sys.argv[2]
