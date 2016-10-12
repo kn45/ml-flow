@@ -2,6 +2,8 @@
 
 A simple machine learning procedure for general supervised tasks. It can be used to setup a fast workspace for task like data competition. The example given is using popular tree ensemble method by xgboost. More sophisticated example like LR+MART may be added later.
 
+## Procedure
+
 
 - GetTsv: 
 
@@ -17,7 +19,7 @@ A simple machine learning procedure for general supervised tasks. It can be used
 
   - Dump data to tab separated <lable, feautures>.
 
-- Split
+- Split:
 
   Split data to training, validation and testing set.
 
@@ -43,3 +45,7 @@ A simple machine learning procedure for general supervised tasks. It can be used
 
   Repeat all the procedure done to the traning set (using possible pickled modules) and apply model to generate submission file (predicting).
 
+
+## Utils
+
+- pros_name.py contains the common utils used in the project.
