@@ -29,7 +29,7 @@
     - Encode categorical feature.
     - Proc text features to strutured form.
 
--   Training:
+-   Training&Testing:
 
     - Resampling for unbanlanced data.
     - Use validation set or cross-validation to tuning model parameters.
@@ -37,5 +37,5 @@
 
 -   Predicting:
 
-    Repeat all the procedure done to the traning set (using possible pickled modules) and apply model to generate submission file (predicting).
+      Repeat all the procedure done to the traning set (using possible pickled modules) and apply model to generate submission file (predicting).
 
