@@ -10,7 +10,7 @@ from operator import itemgetter
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s [%(levelname)s]: %(message)s")
 
-model_file = 'gbt_model.reg.pkl'
+model_file = 'gbt_model.pkl'
 
 
 def train():
