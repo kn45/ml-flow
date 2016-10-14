@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Build feature using various ways from tsv file
 # tsv -> feature
 
 data_trnvld=data_train/data_trnvld.tsv

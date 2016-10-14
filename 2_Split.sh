@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Split data, make data set:
+# Split data, make data sets:
 # @Train+Valid
 # @Train
 # @Valid
