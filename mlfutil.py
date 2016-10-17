@@ -12,14 +12,17 @@ PROJ_DIR = os.path.split(os.path.realpath(__file__))[0]
 RAW_DIR = PROJ_DIR + '/DataTitanic'
 
 
-def draw_progress(iteration, total, pref='', suff='', decimals=1, barlen=50):
+def draw_progress(iteration, total, pref='Progress:', suff='',
+                  decimals=1, barlen=50):
     """Call in a loop to create terminal progress bar
     """
     formatStr = "{0:." + str(decimals) + "f}"
     pcts = formatStr.format(100 * (iteration / float(total)))
     filledlen = int(round(barlen * iteration / float(total)))
     bar = '█' * filledlen + '-' * (barlen - filledlen)
-    sys.stdout.write('\r%s |%s| %s%s %s' % (pref, bar, pcts, '%', suff)),
+    out_str = '\r%s |%s| %s%s %s' % (pref, bar, pcts, '%',suff)
+    out_str = '\x1b[0;34;40m' + out_str + '\x1b[0m'
+    sys.stdout.write(out_str),
     if iteration == total:
         sys.stdout.write('\n')
     sys.stdout.flush()

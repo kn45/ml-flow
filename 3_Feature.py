@@ -23,10 +23,11 @@ with open(infile) as f:
 
 
 fo = open(outfile, 'w')
-for line in data:
+data_size = len(data)
+for nr, line in enumerate(data):
     gender = line[5]
     gender_vec = gender_encoding(gender)
-
+    draw_progress(nr, data_size-1)
     print >> fo, \
         '\t'.join(np.hstack([line[:4],
                              gender_vec,

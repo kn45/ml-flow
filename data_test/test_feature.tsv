@@ -1,90 +1,89 @@
-0	1	3	Braund, Mr. Owen Harris		1	0	A/5 21171	7.25		S
-1	2	1	Cumings, Mrs. John Bradley (Florence Briggs Thayer)		1	0	PC 17599	71.2833	C85	C
-1	3	3	Heikkinen, Miss. Laina		0	0	STON/O2. 3101282	7.925		S
-1	4	1	Futrelle, Mrs. Jacques Heath (Lily May Peel)		1	0	113803	53.1	C123	S
-0	5	3	Allen, Mr. William Henry		0	0	373450	8.05		S
-0	6	3	Moran, Mr. James		0	0	330877	8.4583		Q
-0	7	1	McCarthy, Mr. Timothy J		0	0	17463	51.8625	E46	S
-0	8	3	Palsson, Master. Gosta Leonard		3	1	349909	21.075		S
-1	9	3	Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)		0	2	347742	11.1333		S
-1	10	2	Nasser, Mrs. Nicholas (Adele Achem)		1	0	237736	30.0708		C
-1	11	3	Sandstrom, Miss. Marguerite Rut		1	1	PP 9549	16.7	G6	S
-1	12	1	Bonnell, Miss. Elizabeth		0	0	113783	26.55	C103	S
-0	13	3	Saundercock, Mr. William Henry		0	0	A/5. 2151	8.05		S
-0	14	3	Andersson, Mr. Anders Johan		1	5	347082	31.275		S
-0	15	3	Vestrom, Miss. Hulda Amanda Adolfina		0	0	350406	7.8542		S
-1	16	2	Hewlett, Mrs. (Mary D Kingcome) 		0	0	248706	16		S
-0	17	3	Rice, Master. Eugene		4	1	382652	29.125		Q
-1	18	2	Williams, Mr. Charles Eugene		0	0	244373	13		S
-0	19	3	Vander Planke, Mrs. Julius (Emelia Maria Vandemoortele)		1	0	345763	18		S
-1	20	3	Masselmani, Mrs. Fatima		0	0	2649	7.225		C
-0	21	2	Fynney, Mr. Joseph J		0	0	239865	26		S
-1	22	2	Beesley, Mr. Lawrence		0	0	248698	13	D56	S
-1	23	3	McGowan, Miss. Anna "Annie"		0	0	330923	8.0292		Q
-1	24	1	Sloper, Mr. William Thompson		0	0	113788	35.5	A6	S
-0	25	3	Palsson, Miss. Torborg Danira		3	1	349909	21.075		S
-1	26	3	Asplund, Mrs. Carl Oscar (Selma Augusta Emilia Johansson)		1	5	347077	31.3875		S
-0	27	3	Emir, Mr. Farred Chehab		0	0	2631	7.225		C
-0	28	1	Fortune, Mr. Charles Alexander		3	2	19950	263	C23 C25 C27	S
-1	29	3	O'Dwyer, Miss. Ellen "Nellie"		0	0	330959	7.8792		Q
-0	30	3	Todoroff, Mr. Lalio		0	0	349216	7.8958		S
-0	31	1	Uruchurtu, Don. Manuel E		0	0	PC 17601	27.7208		C
-1	32	1	Spencer, Mrs. William Augustus (Marie Eugenie)		1	0	PC 17569	146.5208	B78	C
-1	33	3	Glynn, Miss. Mary Agatha		0	0	335677	7.75		Q
-0	34	2	Wheadon, Mr. Edward H		0	0	C.A. 24579	10.5		S
-0	35	1	Meyer, Mr. Edgar Joseph		1	0	PC 17604	82.1708		C
-0	36	1	Holverson, Mr. Alexander Oskar		1	0	113789	52		S
-1	37	3	Mamee, Mr. Hanna		0	0	2677	7.2292		C
-0	38	3	Cann, Mr. Ernest Charles		0	0	A./5. 2152	8.05		S
-0	39	3	Vander Planke, Miss. Augusta Maria		2	0	345764	18		S
-1	40	3	Nicola-Yarred, Miss. Jamila		1	0	2651	11.2417		C
-0	41	3	Ahlin, Mrs. Johan (Johanna Persdotter Larsson)		1	0	7546	9.475		S
-0	42	2	Turpin, Mrs. William John Robert (Dorothy Ann Wonnacott)		1	0	11668	21		S
-0	43	3	Kraeff, Mr. Theodor		0	0	349253	7.8958		C
-1	44	2	Laroche, Miss. Simonne Marie Anne Andree		1	2	SC/Paris 2123	41.5792		C
-1	45	3	Devaney, Miss. Margaret Delia		0	0	330958	7.8792		Q
-0	46	3	Rogers, Mr. William John		0	0	S.C./A.4. 23567	8.05		S
+1	311	1	Hays, Miss. Margaret Bechstein		0	0	11767	83.1583	C54	C
+0	283	3	de Pelsmaeker, Mr. Alfons		0	0	345778	9.5		S
+0	814	3	Andersson, Miss. Ebba Iris Alfrida		4	2	347082	31.275		S
+0	629	3	Bostandyeff, Mr. Guentcho		0	0	349224	7.8958		S
+0	491	3	Hagland, Mr. Konrad Mathias Reiersen		1	0	65304	19.9667		S
+0	535	3	Cacic, Miss. Marija		0	0	315084	8.6625		S
+1	256	3	Touma, Mrs. Darwis (Hanne Youssef Razi)		0	2	2650	15.2458		C
+0	801	2	Ponesell, Mr. Martin		0	0	250647	13		S
+0	842	2	Mudd, Mr. Thomas Charles		0	0	S.O./P.P. 3	10.5		S
+1	184	2	Becker, Master. Richard F		2	1	230136	39	F4	S
+0	125	1	White, Mr. Percival Wayland		0	1	35281	77.2875	D26	S
+0	658	3	Bourke, Mrs. John (Catherine)		1	1	364849	15.5		Q
+0	424	3	Danbom, Mrs. Ernst Gilbert (Anna Sigrid Maria Brogren)		1	1	347080	14.4		S
+1	392	3	Jansson, Mr. Carl Olof		0	0	350034	7.7958		S
+1	196	1	Lurette, Miss. Elise		0	0	PC 17569	146.5208	B80	C
+0	602	3	Slabenoff, Mr. Petco		0	0	349214	7.8958		S
+0	889	3	Johnston, Miss. Catherine Helen "Carrie"		1	2	W./C. 6607	23.45		S
 0	47	3	Lennon, Mr. Denis		1	0	370371	15.5		Q
-1	48	3	O'Driscoll, Miss. Bridget		0	0	14311	7.75		Q
-0	49	3	Samaan, Mr. Youssef		2	0	2662	21.6792		C
-0	50	3	Arnold-Franchi, Mrs. Josef (Josefine Franchi)		1	0	349237	17.8		S
-0	51	3	Panula, Master. Juha Niilo		4	1	3101295	39.6875		S
-0	52	3	Nosworthy, Mr. Richard Cater		0	0	A/4. 39886	7.8		S
-1	53	1	Harper, Mrs. Henry Sleeper (Myna Haxtun)		1	0	PC 17572	76.7292	D33	C
-1	54	2	Faunthorpe, Mrs. Lizzie (Elizabeth Anne Wilkinson)		1	0	2926	26		S
-0	55	1	Ostby, Mr. Engelhart Cornelius		0	1	113509	61.9792	B30	C
-1	56	1	Woolner, Mr. Hugh		0	0	19947	35.5	C52	S
-1	57	2	Rugg, Miss. Emily		0	0	C.A. 31026	10.5		S
-0	58	3	Novel, Mr. Mansouer		0	0	2697	7.2292		C
-1	59	2	West, Miss. Constance Mirium		1	2	C.A. 34651	27.75		S
-0	60	3	Goodwin, Master. William Frederick		5	2	CA 2144	46.9		S
-0	61	3	Sirayanian, Mr. Orsen		0	0	2669	7.2292		C
-1	62	1	Icard, Miss. Amelie		0	0	113572	80	B28	
-0	63	1	Harris, Mr. Henry Birkhardt		1	0	36973	83.475	C83	S
-0	64	3	Skoog, Master. Harald		3	2	347088	27.9		S
+0	714	3	Larsson, Mr. August Viktor		0	0	7545	9.4833		S
+1	513	1	McGough, Mr. James Robert		0	0	PC 17473	26.2875	E25	S
+0	494	1	Artagaveytia, Mr. Ramon		0	0	PC 17609	49.5042		C
+0	865	2	Gill, Mr. John William		0	0	233866	13		S
+0	416	3	Meek, Mrs. Thomas (Annie Louise Rowley)		0	0	343095	8.05		S
+1	622	1	Kimball, Mr. Edwin Nelson Jr		1	0	11753	52.5542	D19	S
+0	483	3	Rouse, Mr. Richard Henry		0	0	A/5 3594	8.05		S
+0	139	3	Osen, Mr. Olaf Elon		0	0	7534	9.2167		S
+1	600	1	Duff Gordon, Sir. Cosmo Edmund ("Mr Morgan")		1	0	PC 17485	56.9292	A20	C
+0	161	3	Cribb, Mr. John Hatfield		0	1	371362	16.1		S
+0	715	2	Greenberg, Mr. Samuel		0	0	250647	13		S
+1	890	1	Behr, Mr. Karl Howell		0	0	111369	30	C148	C
+0	621	3	Yasbeck, Mr. Antoni		1	0	2659	14.4542		C
+0	244	3	Maenpaa, Mr. Matti Alexanteri		0	0	STON/O 2. 3101275	7.125		S
+1	534	3	Peter, Mrs. Catherine (Catherine Rizk)		0	2	2668	22.3583		C
+0	730	3	Ilmakangas, Miss. Pieta Sofia		1	0	STON/O2. 3101271	7.925		S
+0	753	3	Vande Velde, Mr. Johannes Joseph		0	0	345780	9.5		S
+0	322	3	Danoff, Mr. Yoto		0	0	349219	7.8958		S
+0	17	3	Rice, Master. Eugene		4	1	382652	29.125		Q
+1	804	3	Thomas, Master. Assad Alexander		0	1	2625	8.5167		C
+0	246	1	Minahan, Dr. William Edward		2	0	19928	90	C78	Q
+0	796	2	Otter, Mr. Richard		0	0	28213	13		S
+1	507	2	Quick, Mrs. Frederick Charles (Jane Richards)		0	2	26360	26		S
+1	195	1	Brown, Mrs. James Joseph (Margaret Tobin)		0	0	PC 17610	27.7208	B4	C
 0	65	1	Stewart, Mr. Albert A		0	0	PC 17605	27.7208		C
-1	66	3	Moubarek, Master. Gerios		1	1	2661	15.2458		C
-1	67	2	Nye, Mrs. (Elizabeth Ramell)		0	0	C.A. 29395	10.5	F33	S
-0	68	3	Crease, Mr. Ernest James		0	0	S.P. 3464	8.1583		S
-1	69	3	Andersson, Miss. Erna Alexandra		4	2	3101281	7.925		S
-0	70	3	Kink, Mr. Vincenz		2	0	315151	8.6625		S
-0	71	2	Jenkin, Mr. Stephen Curnow		0	0	C.A. 33111	10.5		S
-0	72	3	Goodwin, Miss. Lillian Amy		5	2	CA 2144	46.9		S
-0	73	2	Hood, Mr. Ambrose Jr		0	0	S.O.C. 14879	73.5		S
-0	74	3	Chronopoulos, Mr. Apostolos		1	0	2680	14.4542		C
-1	75	3	Bing, Mr. Lee		0	0	1601	56.4958		S
-0	76	3	Moen, Mr. Sigurd Hansen		0	0	348123	7.65	F G73	S
-0	77	3	Staneff, Mr. Ivan		0	0	349208	7.8958		S
-0	78	3	Moutal, Mr. Rahamin Haim		0	0	374746	8.05		S
+0	675	2	Watson, Mr. Ennis Hastings		0	0	239856	0		S
+0	479	3	Karlsson, Mr. Nils August		0	0	350060	7.5208		S
+0	847	3	Sage, Mr. Douglas Bullen		8	2	CA. 2343	69.55		S
+0	274	1	Natsch, Mr. Charles H		0	1	PC 17596	29.7	C118	C
+1	710	3	Moubarek, Master. Halim Gonios ("William George")		1	1	2661	15.2458		C
+0	683	3	Olsvigen, Mr. Thor Anderson		0	0	6563	9.225		S
+1	597	2	Leitch, Miss. Jessie Wills		0	0	248727	33		S
+0	841	3	Alhomaki, Mr. Ilmari Rudolf		0	0	SOTON/O2 3101287	7.925		S
+0	624	3	Hansen, Mr. Henry Damsgaard		0	0	350029	7.8542		S
+0	747	3	Abbott, Mr. Rossmore Edward		1	1	C.A. 2673	20.25		S
+1	339	3	Dahl, Mr. Karl Edwart		0	0	7598	8.05		S
+1	124	2	Webber, Miss. Susan		0	0	27267	13	E101	S
 1	79	2	Caldwell, Master. Alden Gates		0	2	248738	29		S
-1	80	3	Dowdell, Miss. Elizabeth		0	0	364516	12.475		S
-0	81	3	Waelens, Mr. Achille		0	0	345767	9		S
-1	82	3	Sheerlinck, Mr. Jan Baptist		0	0	345779	9.5		S
-0	84	1	Carrau, Mr. Francisco M		0	0	113059	47.1		S
-0	87	3	Ford, Mr. William Neal		1	3	W./C. 6608	34.375		S
-0	88	3	Slocovski, Mr. Selman Francis		0	0	SOTON/OQ 392086	8.05		S
-0	90	3	Celotti, Mr. Francesco		0	0	343275	8.05		S
-0	91	3	Christmann, Mr. Emil		0	0	343276	8.05		S
-0	92	3	Andreasson, Mr. Paul Edvin		0	0	347466	7.8542		S
-0	93	1	Chaffee, Mr. Herbert Fuller		1	0	W.E.P. 5734	61.175	E31	S
-0	94	3	Dean, Mr. Bertram Frank		1	2	C.A. 2315	20.575		S
+1	137	1	Newsom, Miss. Helen Monypeny		0	2	11752	26.2833	D47	S
+1	10	2	Nasser, Mrs. Nicholas (Adele Achem)		1	0	237736	30.0708		C
+0	788	3	Rice, Master. George Hugh		4	1	382652	29.125		Q
+1	357	1	Bowerman, Miss. Elsie Edith		0	1	113505	55	E33	S
+1	128	3	Madsen, Mr. Fridtjof Arne		0	0	C 17369	7.1417		S
+0	617	3	Danbom, Mr. Ernst Gilbert		1	1	347080	14.4		S
+0	773	2	Mack, Mrs. (Mary)		0	0	S.O./P.P. 3	10.5	E77	S
+1	484	3	Turkula, Mrs. (Hedwig)		0	0	4134	9.5875		S
+1	326	1	Young, Miss. Marie Grice		0	0	PC 17760	135.6333	C32	C
+0	405	3	Oreskovic, Miss. Marija		0	0	315096	8.6625		S
+0	771	3	Lievens, Mr. Rene Aime		0	0	345781	9.5		S
+1	447	2	Mellinger, Miss. Madeleine Violet		0	1	250644	19.5		S
+0	720	3	Johnson, Mr. Malkolm Joackim		0	0	347062	7.775		S
+1	605	1	Homer, Mr. Harry ("Mr E Haven")		0	0	111426	26.55		C
+0	785	3	Ali, Mr. William		0	0	SOTON/O.Q. 3101312	7.05		S
+1	20	3	Masselmani, Mrs. Fatima		0	0	2649	7.225		C
+0	169	1	Baumann, Mr. John D		0	0	PC 17318	25.925		S
+1	671	2	Brown, Mrs. Thomas William Solomon (Elizabeth Catherine Ford)		1	1	29750	39		S
+0	123	2	Nasser, Mr. Nicholas		1	0	237736	30.0708		C
+0	800	3	Van Impe, Mrs. Jean Baptiste (Rosalie Paula Govaert)		1	1	345773	24.15		S
+0	114	3	Jussila, Miss. Katriina		1	0	4136	9.825		S
+1	857	1	Wick, Mrs. George Dennick (Mary Hitchcock)		1	1	36928	164.8667		S
+0	254	3	Lobb, Mr. William Arthur		1	0	A/5. 3336	16.1		S
+0	243	2	Coleridge, Mr. Reginald Charles		0	0	W./C. 14263	10.5		S
+0	509	3	Olsen, Mr. Henry Margido		0	0	C 4001	22.525		S
+0	277	3	Lindblom, Miss. Augusta Charlotta		0	0	347073	7.75		S
+1	427	2	Clarke, Mrs. Charles V (Ada Maria Winfield)		1	0	2003	26		S
+1	18	2	Williams, Mr. Charles Eugene		0	0	244373	13		S
+1	470	3	Baclini, Miss. Helene Barbara		2	1	2666	19.2583		C
+0	649	3	Willey, Mr. Edward		0	0	S.O./P.P. 751	7.55		S
+0	52	3	Nosworthy, Mr. Richard Cater		0	0	A/4. 39886	7.8		S
+1	22	2	Beesley, Mr. Lawrence		0	0	248698	13	D56	S
+1	665	3	Lindqvist, Mr. Eino William		1	0	STON/O 2. 3101285	7.925		S
