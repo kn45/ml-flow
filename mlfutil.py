@@ -49,8 +49,6 @@ class cat2idx(object):
             with open(ifname) as f:
                 data = map(lambda l: l.strip('\n').split('\t'), f.readlines())
                 for fields in data:
-                    if col_ed < 0:
-                        col_edd = le
                     for idx in xrange(col_st, len(fields) if col_ed < 0 else
                                       col_ed+1):
                         if fields[idx] not in icats and fields[idx] != '':
