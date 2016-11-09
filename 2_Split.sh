@@ -12,8 +12,8 @@ data_train=data_train/data_train.tsv
 data_valid=data_train/data_valid.tsv
 data_test=data_test/data_test.tsv
 
-test_ratio=0.1
-valid_ratio=0.15
+test_ratio=0.01
+valid_ratio=0.01
 
 
 # For regression task, random sampling

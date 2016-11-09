@@ -28,18 +28,17 @@ def draw_progress(iteration, total, pref='Progress:', suff='',
     sys.stdout.flush()
 
 
-class cat2idx(object):
+class CatEncoder(object):
     """Transform category to global uniq index
     """
     def __init__(self):
         self.cats = {}
 
-    @staticmethod
-    def build_dict(ifnames, columns, ofname):
+    def build_dict(self, ifnames, columns):
         """ifnames are ',' separated
         fields are ',' separated, from 0. means from ... to
         """
-        icats = {}
+        self.cats = {}
         cat_idx = 0
         ifnames = ifnames.split(',')
         cols = columns.split(',')
@@ -51,12 +50,14 @@ class cat2idx(object):
                 for fields in data:
                     for idx in xrange(col_st, len(fields) if col_ed < 0 else
                                       col_ed+1):
-                        if fields[idx] not in icats and fields[idx] != '':
-                            icats[fields[idx]] = cat_idx
+                        if fields[idx] not in self.cats and fields[idx] != '':
+                            self.cats[fields[idx]] = cat_idx
                             cat_idx += 1
+
+    def save_dict(self, ofname):
         with open(ofname, 'w') as fo:
-            for key in icats:
-                print >> fo, '\t'.join(map(str, [key, icats[key]]))
+            for key in self.cats:
+                print >> fo, '\t'.join(map(str, [key, self.cats[key]]))
 
     def load_dict(self, dfname):
         self.cats = {}
@@ -65,18 +66,47 @@ class cat2idx(object):
             for fields in data:
                 self.cats[fields[0]] = int(fields[1])
 
-    def cat2idx(self, cat, dic='extern'):
-        if cat == '':
+    def n_cat(self):
+        return len(self.cats)
+
+    def cat2idx(self, cat):
+        if cat in self.cats:
+            return self.cats[cat]
+        else:
             return -1
-        if dic == 'extern':
-            return self.cats[cat] if cat in self.cats else -1
-        if dic == 'auto':
-            if cat in self.cats:
-                return self.cats[cat]
-            else:
-                idx = len(self.cats)
-                self.cats[cat] = idx
-                return idx
+
+    def cat2onehot(self, cat, missing=False):
+        idx = self.cat2idx(cat)
+        if missing:
+            res = [0] * (self.n_cat() + 1)
+            idx = idx if idx >= 0 else (len(res) - 1)
+            res[idx] = 1
+            return res
+        else:
+            res = [0] * self.n_cat
+            if idx > 0:
+                res[idx] = 1
+            return res
+
+
+class PortEncoder(CatEncoder):
+    def init(self, ifnames='data_all/data_all.tsv', cols='11,11'):
+        self.build_dict(ifnames, cols)
+        print self.cats
+
+    def encode(self, port):
+        return self.cat2onehot(port, missing=True)
+
+
+def fill_missing_value(rec_fields):
+    for idx, col in enumerate(rec_fields):
+        if col == '':
+            rec_fields[idx] = '-999.0'
+    return rec_fields
+
+
+def sex_encoder(gender):
+    return '0' if gender == 'male' else ('1' if gender == 'female' else '')
 
 
 if __name__ == '__main__':
