@@ -92,7 +92,6 @@ class CatEncoder(object):
 class PortEncoder(CatEncoder):
     def init(self, ifnames='data_all/data_all.tsv', cols='11,11'):
         self.build_dict(ifnames, cols)
-        print self.cats
 
     def encode(self, port):
         return self.cat2onehot(port, missing=True)

@@ -39,7 +39,7 @@ def train():
         'silent': 1,
         'eta': 0.1,
         'eval_metric': ['auc', 'error'],
-        'max_depth': 6,
+        'max_depth': 10,
         'subsample': 1.0,
         'colsample_bytree': 1.0,
         'objective': 'binary:logistic',
@@ -48,7 +48,7 @@ def train():
     train_params = {
         'params': bst_params,
         'dtrain': data_train_dmat,
-        'num_boost_round': 2000,  # max round
+        'num_boost_round': 1500,  # max round
         'evals': [(data_train_dmat, 'train'), (data_valid_dmat, 'valid_0')],
         'maximize': False,
         #'early_stopping_rounds': 300,

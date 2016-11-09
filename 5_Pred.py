@@ -54,7 +54,7 @@ def pred():
     logging.info('start predicting')
     logging.info('best_iteration: ' + str(mdl_bst.best_iteration))
     pred_res = mdl_bst.predict(
-        xgb.DMatrix(pred_data_feat),
+        xgb.DMatrix(pred_data_feat, missing=-999.0),
         ntree_limit=mdl_bst.best_iteration)
 
     sbt_res = zip(data_id, [(1 if x>0.5 else 0) for x in pred_res])
