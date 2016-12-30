@@ -34,7 +34,7 @@ rand_samp()
   # split train_valid to train + valid
   # for the training without cross-validation
   valid_cnt=`echo | awk 'BEGIN{print int("'"$trnvld_cnt"'"*"'"$valid_ratio"'")}'`
-  train_cnt=`echo | awk 'BEGIN{print "'"$all_cnt"'"-"'"$valid_cnt"'"}'`
+  train_cnt=`echo | awk 'BEGIN{print "'"$trnvld_cnt"'"-"'"$valid_cnt"'"}'`
   head -n $train_cnt $data_trnvld > $data_train
   tail -n $valid_cnt $data_trnvld > $data_valid
   echo -e "(trnvld)"$trnvld_cnt"  =  (train)"$train_cnt"  + (valid)"$valid_cnt"\tValid Ratio: "$valid_ratio
