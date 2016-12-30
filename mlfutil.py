@@ -9,7 +9,6 @@ Utils are defined in this module for sharing.
 """
 
 PROJ_DIR = os.path.split(os.path.realpath(__file__))[0]
-RAW_DIR = PROJ_DIR + '/DataTitanic'
 
 
 def draw_progress(iteration, total, pref='Progress:', suff='',
@@ -35,7 +34,8 @@ class CatEncoder(object):
         self.cats = {}
 
     def build_dict(self, ifnames, columns):
-        """ifnames are ',' separated
+        """need override
+        ifnames are ',' separated
         fields are ',' separated, from 0. means from ... to
         """
         self.cats = {}
@@ -57,12 +57,14 @@ class CatEncoder(object):
     def save_dict(self, ofname):
         with open(ofname, 'w') as fo:
             for key in self.cats:
-                print >> fo, '\t'.join(map(str, [key, self.cats[key]]))
+                print >> fo, \
+                    '\t'.join([key.encode('utf8'), str(self.cats[key])])
 
     def load_dict(self, dfname):
         self.cats = {}
         with open(dfname) as f:
-            data = map(lambda l: l.strip('\n').split('\t'), f.readlines())
+            data = [l.strip('\n').decode('utf8').split('\t')
+                    for l in f.readlines()]
             for fields in data:
                 self.cats[fields[0]] = int(fields[1])
 
@@ -96,6 +98,22 @@ class PortEncoder(CatEncoder):
     def encode(self, port):
         return self.cat2onehot(port, missing=True)
 
+class CharEncoder(CatEncoder):
+    def build_dict(self, ifname):
+        """PAD: 0
+        UNK: -1
+        """
+        self.cats = {}  # clean inner dict
+        cat_idx = 1
+        with open(ifname) as f:
+            data = [x.strip('\n').split('\t')[1] for x in f.readlines()]
+            for sent in data:
+                for char in sent.decode('utf8'):
+                    if char not in self.cats:
+                        self.cats[char] = cat_idx
+                        cat_idx += 1
+        self.cats['UNK'] = cat_idx
+
 
 def fill_missing_value(rec_fields):
     for idx, col in enumerate(rec_fields):
@@ -104,13 +122,8 @@ def fill_missing_value(rec_fields):
     return rec_fields
 
 
-def sex_encoder(gender):
-    return '0' if gender == 'male' else ('1' if gender == 'female' else '')
-
-
 if __name__ == '__main__':
     print "PROJ_DIR:\t" + PROJ_DIR
-    print "RAW_DIR:\t" + RAW_DIR
     from time import sleep
     for i in range(50):
         sleep(0.05)
