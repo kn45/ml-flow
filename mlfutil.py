@@ -98,6 +98,7 @@ class PortEncoder(CatEncoder):
     def encode(self, port):
         return self.cat2onehot(port, missing=True)
 
+
 class CharEncoder(CatEncoder):
     def build_dict(self, ifname):
         """PAD: 0

@@ -16,6 +16,7 @@ model_file = 'gbt_model.pkl'
 mdl_bst = None
 port_encoder = None
 
+
 def data2feat(inst):
     feats = []
     pclass = inst[0]  # number
@@ -27,7 +28,7 @@ def data2feat(inst):
     ticket = inst[6]  # string
     fare = inst[7]  # number
     cabin = inst[8]  # string
-    port = inst [9]  # cat
+    port = inst[9]  # cat
 
     feats += [pclass]
     feats += sex_encoder(sex)
@@ -38,7 +39,7 @@ def data2feat(inst):
     feats += port_encoder.encode(port)
     return fill_missing_value(feats)
 
-  
+
 def pred():
     # with open('data_pred/data_pred.tsv') as f:
     id_data = None
@@ -57,7 +58,7 @@ def pred():
         xgb.DMatrix(pred_data_feat, missing=-999.0),
         ntree_limit=mdl_bst.best_iteration)
 
-    sbt_res = zip(data_id, [(1 if x>0.5 else 0) for x in pred_res])
+    sbt_res = zip(data_id, [(1 if x > 0.5 else 0) for x in pred_res])
     # output prediction result to stdout
     with open('data_pred/sbt.csv', 'w') as sbtf:
         writer = csv.writer(sbtf)

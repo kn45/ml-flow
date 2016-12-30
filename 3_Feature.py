@@ -6,6 +6,7 @@ from mlfutil import *
 
 port_encoder = None
 
+
 def init():
     global port_encoder
     port_encoder = PortEncoder()
@@ -33,7 +34,7 @@ def build_feat():
         ticket = inst[8]  # string
         fare = inst[9]  # number
         cabin = inst[10]  # string
-        port = inst [11]  # cat
+        port = inst[11]  # cat
 
         feats += [pclass]
         feats += sex_encoder(sex)

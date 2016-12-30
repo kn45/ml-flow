@@ -51,7 +51,7 @@ def train():
         'num_boost_round': 1500,  # max round
         'evals': [(data_train_dmat, 'train'), (data_valid_dmat, 'valid_0')],
         'maximize': False,
-        #'early_stopping_rounds': 300,
+        # 'early_stopping_rounds': 300,
         'verbose_eval': True
         }
     mdl_bst = xgb.train(**train_params)
