@@ -91,14 +91,6 @@ class CatEncoder(object):
             return res
 
 
-class PortEncoder(CatEncoder):
-    def init(self, ifnames='data_all/data_all.tsv', cols='11,11'):
-        self.build_dict(ifnames, cols)
-
-    def encode(self, port):
-        return self.cat2onehot(port, missing=True)
-
-
 class CharEncoder(CatEncoder):
     def build_dict(self, ifname):
         """PAD: 0
