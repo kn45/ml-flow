@@ -8,4 +8,3 @@ cd model_example
 bash 3_Feature.sh
 bash 4_Train.sh
 bash 5_Pred.sh
-
