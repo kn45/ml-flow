@@ -13,7 +13,7 @@ class DictTable(object):
                 for line in f:
                     k, v = line.rstrip('\n').split('\t')
                     self.table[k] = int(v)
-                    self.table[int(v)] = k
+                    self.rev_table[int(v)] = k
         if isinstance(dict_file, dict):
             self.table = copy.deepcopy(dict_file)
             for k in dict_file:
@@ -29,6 +29,7 @@ class DictTable(object):
         return ids
 
     def lookup_rev(self, ids):
+        ids = map(int, list(ids))
         words = []
         for idx in ids:
             if idx in self.rev_table:
