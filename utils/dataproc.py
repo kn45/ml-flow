@@ -5,19 +5,26 @@ import sys
 
 
 class DictTable(object):
-    def __init__(self, dict_file):
+    def __init__(self, dict_file, UNK=None):
         self.table = {}
         self.rev_table = {}
+        self.UNK = UNK
         if isinstance(dict_file, basestring):
             with open(dict_file) as f:
                 for line in f:
                     k, v = line.rstrip('\n').split('\t')
                     self.table[k] = int(v)
                     self.rev_table[int(v)] = k
+                    if v == self.UNK:
+                        sys.stderr.write('word index is conflict with UNK: ')
+                        sys.stderr.write(k + ' ' + v + '\n')
         if isinstance(dict_file, dict):
             self.table = copy.deepcopy(dict_file)
             for k in dict_file:
                 self.rev_table[dict_file[k]] = k
+                if dict_file[k] == self.UNK:
+                    sys.stderr.write('word index is conflict with UNK: ')
+                    sys.stderr.write(k + ' ' + v + '\n')
 
     def lookup(self, words):
         ids = []
@@ -25,7 +32,7 @@ class DictTable(object):
             if word in self.table:
                 ids.append(self.table[word])
             else:
-                ids.append(None)
+                ids.append(self.UNK)
         return ids
 
     def lookup_rev(self, ids):
