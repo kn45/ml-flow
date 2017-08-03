@@ -24,7 +24,7 @@ class DictTable(object):
                 self.rev_table[dict_file[k]] = k
                 if dict_file[k] == self.UNK:
                     sys.stderr.write('word index is conflict with UNK: ')
-                    sys.stderr.write(k + ' ' + v + '\n')
+                    sys.stderr.write(str(k) + ' ' + str(v) + '\n')
 
     def lookup(self, words):
         ids = []
