@@ -2,6 +2,7 @@
 import copy
 import numpy as np
 import sys
+from operator import itemgetter
 
 
 class DictTable(object):
@@ -111,6 +112,35 @@ def draw_progress(iteration, total, pref='Progress:', suff='',
         sys.stderr.write('\n')
     sys.stderr.flush()
 
+
+def auc(true_rec, pred_rec):
+    """AUC with float label
+    """
+    rec = [(p, t) for p, t in zip(pred_rec, true_rec)]
+    rec = sorted(rec, key=itemgetter(0), reverse=True)
+
+    sum_pospair = 0.0
+    sum_npos = 0.0
+    sum_nneg = 0.0
+    buf_pos = 0.0
+    buf_neg = 0.0
+    for j in xrange(len(rec)):
+        ctr = rec[j][1]
+        # keep bucketing predictions in same bucket
+        if (j != 0 and rec[j][0] != rec[j - 1][0]):
+            sum_pospair += buf_neg * (sum_npos + buf_pos * 0.5)
+            sum_npos += buf_pos
+            sum_nneg += buf_neg
+            buf_neg = 0.0
+            buf_pos = 0.0
+        buf_pos += ctr
+        buf_neg += (1.0 - ctr)
+    sum_pospair += buf_neg * (sum_npos + buf_pos * 0.5)
+    sum_npos += buf_pos
+    sum_nneg += buf_neg
+    # this is the AUC
+    sum_auc = sum_pospair / (sum_npos*sum_nneg)
+    return sum_auc
 
 if __name__ == '__main__':
     freader = BatchReader('../run.sh', 2)
