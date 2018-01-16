@@ -68,11 +68,9 @@ class BinSpliter(object):
 
     def add_bin(self, src, col_name, nbins):
         sorted_data = sorted(src)
-        print sorted_data
         sps =  []
         for i in range(nbins-1):  # nbins-1 spliters
             idx = int((i+1.)/nbins*len(src))
-            print idx
             sps.append(sorted_data[idx])
         self.data[col_name] = sps
 
