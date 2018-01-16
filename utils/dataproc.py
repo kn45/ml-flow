@@ -61,6 +61,11 @@ class BinSpliter(object):
                 sps = map(float, sps.split(' '))
                 self.data[col_name] = sorted(sps)
 
+    def save_bin(self, fname):
+        with open(fname, 'w') as fo:
+            for col in self.data:
+                print >> fo, col + '\t' + ' '.join(map(str, self.data[col]))
+
     def add_bin(self, src, col_name, nbins):
         sorted_data = sorted(src)
         print sorted_data
@@ -202,3 +207,4 @@ if __name__ == '__main__':
     print bs.find_bin('t', 0.3), bs.find_onehot('t', 0.3)
     print bs.find_bin('t', 0.7), bs.find_onehot('t', 0.7)
     print bs.find_bin('t', 1.0), bs.find_onehot('t', 1.)
+    bs.save_bin('ttt')
