@@ -6,13 +6,16 @@ from operator import itemgetter
 
 
 class DictTable(object):
-    def __init__(self, dict_file, UNK=None):
+    def __init__(self, dict_file=None, UNK=None):
         """dict file format:
         word '\t' index
         """
         self.table = {}
         self.rev_table = {}
         self.UNK = UNK
+        self.update(dict_file)
+
+    def update(self, dict_file):
         if isinstance(dict_file, basestring):
             with open(dict_file) as f:
                 for line in f:
