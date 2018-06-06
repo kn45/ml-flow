@@ -1,4 +1,5 @@
 # -*- coding=utf-8 -*-
+from __future__ import print_function
 import copy
 import numpy as np
 import sys
@@ -67,11 +68,11 @@ class BinSpliter(object):
     def save_bin(self, fname):
         with open(fname, 'w') as fo:
             for col in self.data:
-                print >> fo, col + '\t' + ' '.join(map(str, self.data[col]))
+                print(col, ' '.join(map(str, self.data[col])), sep='\t', file=fo)
 
     def add_bin(self, src, col_name, nbins):
         sorted_data = sorted(src)
-        sps =  []
+        sps = []
         for i in range(nbins-1):  # nbins-1 spliters
             idx = int((i+1.)/nbins*len(src))
             sps.append(sorted_data[idx])
@@ -203,9 +204,9 @@ if __name__ == '__main__':
     bs = BinSpliter()
     data = np.random.rand(30)
     bs.add_bin(data, 't', 5)
-    print bs.data
-    print bs.find_bin('t', 0.0), bs.find_onehot('t', 0)
-    print bs.find_bin('t', 0.3), bs.find_onehot('t', 0.3)
-    print bs.find_bin('t', 0.7), bs.find_onehot('t', 0.7)
-    print bs.find_bin('t', 1.0), bs.find_onehot('t', 1.)
+    print(bs.data)
+    print(bs.find_bin('t', 0.0), bs.find_onehot('t', 0))
+    print(bs.find_bin('t', 0.3), bs.find_onehot('t', 0.3))
+    print(bs.find_bin('t', 0.7), bs.find_onehot('t', 0.7))
+    print(bs.find_bin('t', 1.0), bs.find_onehot('t', 1.))
     bs.save_bin('ttt')
