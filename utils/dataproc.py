@@ -200,6 +200,32 @@ def auc(true_rec, pred_rec):
     return sum_auc
 
 
+def libsvm2tfrecord(input_file, output_file):
+    writer = tf.python_io.TFRecordWriter(output_file)
+    for line in open(input_file, 'r'):
+        data = line.split(' ')
+        label = float(data[0])
+        ids = []
+        values = []
+        for fea in data[1:]:
+            fea_id, value = fea.split(':')
+            ids.append(int(fea_id))
+            values.append(float(value))
+
+        # Write each example one by one
+        example = tf.train.Example(features=tf.train.Features(feature={
+            "label":
+                tf.train.Feature(float_list=tf.train.FloatList(value=[label])),
+            "ids":
+                tf.train.Feature(int64_list=tf.train.Int64List(value=ids)),
+            "values":
+                tf.train.Feature(float_list=tf.train.FloatList(value=values))
+        }))
+        writer.write(example.SerializeToString())
+    writer.close()
+    print("Successfully convert {} to {}".format(input_file, output_file))
+
+
 if __name__ == '__main__':
     bs = BinSpliter()
     data = np.random.rand(30)
