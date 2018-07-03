@@ -226,6 +226,29 @@ def libsvm2tfrecord(input_file, output_file):
     print("Successfully convert {} to {}".format(input_file, output_file))
 
 
+def f1_multiclass(true_rec, pred_rec):
+    rec = {}
+    for t, p in zip(true_rec, pred_rec):
+        if t not in rec:
+            rec[t] = [0, 0, 0]  # tp, tp+fp, tp+fn
+        if p not in rec:
+            rec[p] = [0, 0, 0]
+        if t == p:
+            rec[t][0] += 1
+            rec[t][1] += 1
+            rec[t][2] += 1
+        if p != t:
+            rec[p][1] += 1  # it's a fp for p
+            rec[t][2] += 1  # it's a fn for t
+    f1 = 0.0
+    for label in rec:
+        precision = rec[label][0] / float(rec[label][1])
+        recall = rec[label][0] / float(rec[label][2])
+        f1 += 2.0 * precision * recall / (precision + recall)
+    f1 = f1 / len(rec)
+    return f1
+
+
 if __name__ == '__main__':
     bs = BinSpliter()
     data = np.random.rand(30)
