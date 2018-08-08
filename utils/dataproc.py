@@ -135,11 +135,13 @@ class BatchReader(object):
             batch_size = self.default_batch_size
         return self._get_batch(batch_size, [])
 
-    def next(self):
+    def __next__(self):
         data = self.get_batch()
         if not data:
             raise StopIteration
         return data
+
+    next = __next__
 
     def __iter__(self):
         return self
