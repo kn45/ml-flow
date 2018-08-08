@@ -101,20 +101,19 @@ class BinSpliter(object):
 class BatchReader(object):
     """Get batch data recurrently from a file.
     """
-    def __init__(self, file_name, max_epoch=None):
+    def __init__(self, file_name, max_epoch=None, batch_size=None):
         self.fname = file_name
         self.max_epoch = max_epoch
+        self.default_batch_size = batch_size
         self.nepoch = 0
         self.fp = None
 
     def __del__(self):
-        if self.fp:
+        if self.fp is not None:
             self.fp.close()
 
-    def get_batch(self, batch_size, out=None):
-        if out is None:
-            out = []
-        if not self.fp:
+    def _get_batch(self, batch_size, out):
+        if self.fp is None:
             if (not self.max_epoch) or self.nepoch < self.max_epoch:
                 # if max_epoch not set or num_epoch not reach the limit
                 self.fp = open(self.fname)
@@ -128,8 +127,22 @@ class BatchReader(object):
         else:
             self.fp.close()
             self.fp = None
-            return self.get_batch(batch_size, out)
+            return self._get_batch(batch_size, out)
         return out
+
+    def get_batch(self, batch_size=None):
+        if batch_size is None:
+            batch_size = self.default_batch_size
+        return self._get_batch(batch_size, [])
+
+    def next(self):
+        data = self.get_batch()
+        if not data:
+            raise StopIteration
+        return data
+
+    def __iter__(self):
+        return self
 
 
 def sparse2dense(ids, ndim):
