@@ -9,9 +9,9 @@ https://github.com/kn45/mlflow
 
 - GetTsv:  
   Transform label to structured form, while features remain original style.  
-  - Global pre-processing:
-    handle missing value
-    abnormal detection
+  - Global pre-processing:  
+    handle missing value  
+    abnormal detection  
     drop bad data by certain filter
   - Dump data to tab separated <lable, feautures>.
 
